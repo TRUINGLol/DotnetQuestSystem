@@ -1,0 +1,19 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+.import/
+.mono/
+
+# Ignore standard build folders created during project compilation
+bin/
+obj/
+Debug/
+Release/
+
+# Ignore Visual Studio Code settings and configurations
+.vscode/
+
+# Ignore temporary files that may be created during development
+tmp/
+*.tmp
+*.temp

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetQuestSystemAddon", "DotnetQuestSystemAddon.csproj", "{37491199-0456-4B57-9CD5-DE2BBC4CAD5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37491199-0456-4B57-9CD5-DE2BBC4CAD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37491199-0456-4B57-9CD5-DE2BBC4CAD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37491199-0456-4B57-9CD5-DE2BBC4CAD5C}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{37491199-0456-4B57-9CD5-DE2BBC4CAD5C}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{37491199-0456-4B57-9CD5-DE2BBC4CAD5C}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{37491199-0456-4B57-9CD5-DE2BBC4CAD5C}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D3A86B4-78EB-495D-A152-9246578A1F87}
+	EndGlobalSection
+EndGlobal

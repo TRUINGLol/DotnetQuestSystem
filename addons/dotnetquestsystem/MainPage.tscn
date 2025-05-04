@@ -1,0 +1,186 @@
+[gd_scene load_steps=3 format=3 uid="uid://ghs7qtultde6"]
+
+[ext_resource type="Script" uid="uid://m8efb203ij2s" path="res://addons/dotnetquestsystem/RewardOption.cs" id="1_pi4nx"]
+[ext_resource type="Script" uid="uid://ludjahesqwf8" path="res://addons/dotnetquestsystem/MainPage.cs" id="1_pwxvg"]
+
+[node name="MainPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_pwxvg")
+QuestListPath = NodePath("HBoxContainer/QuestList/ItemList")
+PanelViewPath = NodePath("HBoxContainer/QuestProperties/View")
+NamePath = NodePath("HBoxContainer/QuestProperties/View/VBoxContainer/Name/LineEdit")
+DescriptionPath = NodePath("HBoxContainer/QuestProperties/View/VBoxContainer/Description/TextEdit")
+ObjectivePath = NodePath("HBoxContainer/QuestProperties/View/VBoxContainer/Objective/TextEdit")
+RewardPath = NodePath("HBoxContainer/QuestProperties/View/VBoxContainer/Reward/OptionButton")
+DeleteQuestPath = NodePath("HBoxContainer/QuestList/HBoxContainer/Delete quest")
+FileDialogPath = NodePath("HBoxContainer/QuestList/ItemList/HBoxContainer/FileDialog")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuestList" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/QuestList"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="HBoxContainer/QuestList/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quests"
+horizontal_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer/QuestList"]
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+same_column_width = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/QuestList/ItemList"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="HBoxContainer/QuestList/ItemList/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Select save quest path"
+
+[node name="FileDialog" type="FileDialog" parent="HBoxContainer/QuestList/ItemList/HBoxContainer"]
+title = "Open a Directory"
+ok_button_text = "Select Current Folder"
+file_mode = 2
+access = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/QuestList"]
+layout_mode = 2
+
+[node name="New quest" type="Button" parent="HBoxContainer/QuestList/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Add new quest"
+
+[node name="Delete quest" type="Button" parent="HBoxContainer/QuestList/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Delete quest"
+
+[node name="QuestProperties" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="View" type="Panel" parent="HBoxContainer/QuestProperties"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/QuestProperties/View"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Name" type="HBoxContainer" parent="HBoxContainer/QuestProperties/View/VBoxContainer"]
+layout_mode = 2
+
+[node name="QuestName" type="Label" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Name"]
+layout_mode = 2
+text = "Quest name"
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Name"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Description" type="HBoxContainer" parent="HBoxContainer/QuestProperties/View/VBoxContainer"]
+layout_mode = 2
+
+[node name="QuestDescription" type="Label" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Description"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Quest description"
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Description"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="Objective" type="HBoxContainer" parent="HBoxContainer/QuestProperties/View/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Objective"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Objective"
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Objective"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="Reward" type="HBoxContainer" parent="HBoxContainer/QuestProperties/View/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Reward"]
+layout_mode = 2
+text = "Reward"
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/QuestProperties/View/VBoxContainer/Reward"]
+layout_mode = 2
+size_flags_horizontal = 3
+allow_reselect = true
+script = ExtResource("1_pi4nx")
+ButtonPath = NodePath(".")
+AttributeContainerPath = NodePath("../../RewardAttribute")
+
+[node name="RewardAttribute" type="HBoxContainer" parent="HBoxContainer/QuestProperties/View/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/QuestProperties/View/VBoxContainer/RewardAttribute"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Attribute"
+
+[node name="Constructor" type="HBoxContainer" parent="HBoxContainer/QuestProperties/View/VBoxContainer/RewardAttribute"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveQuest" type="Button" parent="HBoxContainer/QuestProperties/View/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Save Quest"
+
+[connection signal="item_selected" from="HBoxContainer/QuestList/ItemList" to="." method="OnQuestItemSelect"]
+[connection signal="pressed" from="HBoxContainer/QuestList/ItemList/HBoxContainer/Button" to="." method="OnSelectQuestPathButtonPressed"]
+[connection signal="confirmed" from="HBoxContainer/QuestList/ItemList/HBoxContainer/FileDialog" to="." method="OnQuestPathSelect"]
+[connection signal="pressed" from="HBoxContainer/QuestList/HBoxContainer/New quest" to="." method="OnCreateNewQuestButtonPressed"]
+[connection signal="pressed" from="HBoxContainer/QuestList/HBoxContainer/Delete quest" to="." method="OnDeleteQuestButtonPressed"]
+[connection signal="item_selected" from="HBoxContainer/QuestProperties/View/VBoxContainer/Reward/OptionButton" to="HBoxContainer/QuestProperties/View/VBoxContainer/Reward/OptionButton" method="OnRewardTypeSelect"]
+[connection signal="pressed" from="HBoxContainer/QuestProperties/View/VBoxContainer/SaveQuest" to="." method="OnSaveQuestButtonPressed"]

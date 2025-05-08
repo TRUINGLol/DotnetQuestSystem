@@ -40,7 +40,7 @@ public partial class Plugin : EditorPlugin
 
 	public override Texture2D _GetPluginIcon()
 	{
-		return EditorInterface.Singleton.GetEditorTheme().GetIcon("Node", "EditorIcons");
+		return (Texture2D)ResourceLoader.Load("res://addons/dotnetquestsystem/assets/dotnetquestsystem_node.svg");
 	}
 }
 #endif

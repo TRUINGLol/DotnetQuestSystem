@@ -1,7 +1,7 @@
 <h1  align="center">DOTNET QUEST SYSTEM</h1>
 
 [![GodotEngine](https://img.shields.io/badge/-Godot%204-250a78?style=flat&logo=godotengine&logoColor=white&labelColor=250a78)](https://godotengine.org/)
-![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
+![Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg)
 
 # Simple quest system for Godot
 DotnetQuestSystem - is a simple and powerful [Godot](https://godotengine.org/) add-on that greatly speeds up the process of creating a quest system. Its clean API, written in C#, allows you to quickly integrate quest mechanics into your games.

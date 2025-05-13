@@ -1,6 +1,7 @@
 <h1  align="center">DOTNET QUEST SYSTEM</h1>
 
 [![GodotEngine](https://img.shields.io/badge/-Godot%204-250a78?style=flat&logo=godotengine&logoColor=white&labelColor=250a78)](https://godotengine.org/)
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/godotengine/awesome-godot)
 ![Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg)
 
 # Simple quest system for Godot
